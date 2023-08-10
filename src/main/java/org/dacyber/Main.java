@@ -5,32 +5,38 @@ import java.util.Scanner;
 
 
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// ADULT BMI CALCULATION IN KILOGRAM AND METERS
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
 
+        System.out.println(" CHECK YOUR BMI, FOR ADULTS ONLY");
+// TAKE FLOAT INPUT FROM USER FOR WEIGHT
 
-        System.out.println (" CHECK YOUR BMI");
+        System.out.println(" ENTER THE NUMERIC VALUE OF YOUR WEIGHT IN KILOGRAM");
+        Scanner input = new Scanner(System.in);
+        double weight = input.nextDouble();
 
-        System.out.println (" ENTER THE NUMERIC VALUE OF YOUR WEIGHT IN KILOGRAM");
-        Scanner input = new Scanner(System.in) ;
-        double weight = input.nextDouble() ;
+// VALIDATING INPUTS
+// TAKE FLOAT INPUT FROM USER FOR HEIGHT
 
+        System.out.println(" ENTER THE NUMERIC VALUE OF YOUR HEIGHT IN METERS");
+        input = new Scanner(System.in);
+        double height = input.nextDouble();
 
-        System.out.println (" ENTER THE NUMERIC VALUE OF YOUR HEIGHT IN METERS");
-        Scanner input2 = new Scanner(System.in) ;
-         double height = input2.nextDouble() ;
-
-
-
+// VALIDATING INPUTS
+// CALCULATE BMI FORMULA
         double bmi = (weight / (height * height));
 
+        if (bmi >= 40) {
+            System.out.println("THE RESULT SHOWS THAT YOU ARE OBESE" + "  "+bmi);
+        } else if (bmi >= 20.5) {
+                System.out.println("THE RESULT SHOWS THAT YOU ARE OVERWEIGHT" + "  "+bmi);
+            } else if (bmi >= 18.5) {
+                System.out.println("THE RESULT SHOWS THAT YOU ARE NORMAL" + "  "+bmi );
+            } else {
+                System.out.println("THE RESULT SHOWS THAT YOU ARE UNDERWEIGHT" + "  "+bmi);
+            }
+    }
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.printf("%.1f",bmi);
-        }
     }
