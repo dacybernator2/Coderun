@@ -26,6 +26,9 @@ public class Main {
 
 // VALIDATING INPUTS
 // CALCULATE BMI FORMULA
+
+
+
         double bmi = (weight / (height * height));
 
         if (bmi >= 40) {
